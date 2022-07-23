@@ -15,9 +15,10 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static io.qameta.allure.Allure.step;
 
 public class TestBase {
+    static String env;
     @BeforeAll
     public static void setup() {
-        String env = System.getProperty("env", "local");
+        env = System.getProperty("env", "local");
         if (env.equals("local")) {
             Configuration.browser = LocalMobileDriver.class.getName();
         } else if (env.equals("browserstack")) {
@@ -45,7 +46,9 @@ public class TestBase {
     public void afterEach() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-
+        if (env.equals("browserstack")) {
+            Attach.video(Attach.sessionId());
+        }
         step("Close driver", Selenide::closeWebDriver);
     }
 }
