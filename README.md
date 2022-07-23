@@ -7,8 +7,8 @@
 ## :floppy_disk: Содержание:
 - <a href="#computer-технологии-и-инструменты">Технологии и инструменты</a>
 - <a href="#notebook_with_decorative_cover-реализованные-проверки">Реализованные проверки</a>
-- <a href="#electric_plug-сборка-в-Jenkins">Сборка в Jenkins</a>
 - <a href="#arrow_forward-запуск-из-терминала">Запуск из терминала</a>
+- <a href="#electric_plug-сборка-в-Jenkins">Сборка в Jenkins</a>
 - <a href="#👽-отчет-browserstack">Отчет BrowserStack</a>
 - <a href="#open_book-allure-отчет">Allure отчет</a>
 - <a href="#hammer-allure-test-ops-отчет">Allure Test Ops отчет</a>
