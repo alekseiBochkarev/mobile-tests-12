@@ -33,10 +33,8 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
-        options.setDeviceName("RFCR90ZMNQP");
-//        options.setDeviceName("Pixel 4 API 30");
-        options.setPlatformVersion("12.0");
-//        options.setPlatformVersion("11.0");
+        options.setDeviceName("Pixel 5 API 29");
+        options.setPlatformVersion("10.0");
         options.setApp(app.getAbsolutePath());
         options.setAppPackage("org.wikipedia.alpha");
         options.setAppActivity("org.wikipedia.main.MainActivity");
