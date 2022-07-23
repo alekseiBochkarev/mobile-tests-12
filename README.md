@@ -58,12 +58,12 @@ gradle clean test -Denv=browserstack
 ## :open_book: Allure отчет
 - ### Стартовая страница отчета
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/allureMain.png.png">
+<img title="Allure Overview Dashboard" src="images/allureMain.png">
 </p>
 
 - ### Страница с проведенными тестами
 <p align="center">
-<img title="Allure Test Page" src="images/allureSuites.png.png">
+<img title="Allure Test Page" src="images/allureSuites.png">
 </p>
 
 ## :hammer: Allure Test Ops отчет
