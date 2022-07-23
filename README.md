@@ -74,11 +74,11 @@ gradle clean test -Denv=browserstack
 
 ## :robot: Отчет в Telegram
 <p align="center">
-<img title="Telegram notification message" src="images/img_6.png">
+<img title="Telegram notification message" src="images/telegramReport.png">
 </p>
 
 ## :film_projector: Видео пример прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
-  <img title="Selenoid Video" src="images/876f475c91f3138b9272c6559f5864e2fcca7ea3.gif">
+  <img title="Browserstack Video" src="images/gif/alluretestvideo.gif">
 </p>
