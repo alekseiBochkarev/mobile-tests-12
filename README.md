@@ -47,7 +47,7 @@ gradle clean test -Denv=browserstack
 ## :electric_plug: Сборка в Jenkins
 ##### <a target="_blank" href="https://jenkins.autotests.cloud/view/C12-BochkarevAlexej/job/C12-BochkarevAlexej-lesson22-mobile-tests/">Сборка в Jenkins</a>
 <p align="center">
-<img title="Jenkins Dashboard" src="images/img.png">
+<img title="Jenkins Dashboard" src="images/jenkinsbuild.png">
 </p>  
 
 ## 👽 Отчет BrowserStack
@@ -56,14 +56,14 @@ gradle clean test -Denv=browserstack
 <img title="BrowserStack dashboard" src="images/browserstack.png">
 
 ## :open_book: Allure отчет
-- ### Главный экран отчета
+- ### Стартовая страница отчета
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/img_3.png">
+<img title="Allure Overview Dashboard" src="images/allureMain.png.png">
 </p>
 
 - ### Страница с проведенными тестами
 <p align="center">
-<img title="Allure Test Page" src="images/img_4.png">
+<img title="Allure Test Page" src="images/allureSuites.png.png">
 </p>
 
 ## :hammer: Allure Test Ops отчет
