@@ -2,7 +2,7 @@ package tests.hometask;
 
 import org.junit.jupiter.api.Test;
 import pages.OnboardingPage;
-import tests.local.TestBase;
+import tests.TestBase;
 
 import static io.qameta.allure.Allure.step;
 

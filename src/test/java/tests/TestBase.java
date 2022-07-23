@@ -1,4 +1,4 @@
-package tests.local;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -17,8 +17,21 @@ import static io.qameta.allure.Allure.step;
 public class TestBase {
     @BeforeAll
     public static void setup() {
-        Configuration.browser = LocalMobileDriver.class.getName();
+        String env = System.getProperty("env", "local");
+        if (env.equals("local")) {
+            Configuration.browser = LocalMobileDriver.class.getName();
+        } else if (env.equals("browserstack")) {
+            Configuration.browser = BrowserstackMobileDriver.class.getName();
+        } else {
+            System.out.println("I don't know this ENVIRONMENT");
+        }
         Configuration.browserSize = null;
+    }
+
+    private enum Env
+    {
+        browserstack,
+        local
     }
 
     @BeforeEach

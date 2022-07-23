@@ -1,9 +1,11 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+import config.LocalConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -16,10 +18,11 @@ import java.net.URL;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class LocalMobileDriver implements WebDriverProvider {
+    static LocalConfig config = ConfigFactory.create(LocalConfig.class, System.getProperties());
 
     public static URL getAppiumServerUrl() {
         try {
-            return new URL("http://localhost:4723/wd/hub");
+            return new URL(config.url());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -32,12 +35,12 @@ public class LocalMobileDriver implements WebDriverProvider {
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
-        options.setPlatformName("Android");
-        options.setDeviceName("Pixel 5 API 29");
-        options.setPlatformVersion("10.0");
+        options.setPlatformName(config.platformName());
+        options.setDeviceName(config.device());
+        options.setPlatformVersion(config.osVersion());
         options.setApp(app.getAbsolutePath());
-        options.setAppPackage("org.wikipedia.alpha");
-        options.setAppActivity("org.wikipedia.main.MainActivity");
+        options.setAppPackage(config.appPackage());
+        options.setAppActivity(config.appActivity());
 
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
