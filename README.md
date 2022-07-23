@@ -39,10 +39,16 @@
 ```
 gradle clean test -Denv=local
 ```
-Запуск в Jenkins:
+Запуск в Browserstack:
 ```
 gradle clean test -Denv=browserstack
 ```
+
+## :electric_plug: Сборка в Jenkins
+##### <a target="_blank" href="https://jenkins.autotests.cloud/view/C12-BochkarevAlexej/job/C12-BochkarevAlexej-lesson22-mobile-tests/">Сборка в Jenkins</a>
+<p align="center">
+<img title="Jenkins Dashboard" src="images/img.png">
+</p>  
 
 ## 👽 Отчет BrowserStack
 Подробности прохождения тестов мы можем увидеть в личном кабинете BrowserStack.
@@ -62,7 +68,8 @@ gradle clean test -Denv=browserstack
 
 ## :hammer: Allure Test Ops отчет
 <p align="center">
-<img title="Allure Test Ops Launch" src="images/img_5.png">
+<img title="Allure Test Ops Launch" src="images/allureTestOps.png">
+<img title="Allure Test Ops Dashboard" src="images/allureTestOps2.png">
 </p>
 
 ## :robot: Отчет в Telegram
