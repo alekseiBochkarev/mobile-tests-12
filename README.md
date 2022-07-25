@@ -62,7 +62,7 @@ gradle clean test -Denv=browserstack
 ## :open_book: Allure отчет
 - ### Стартовая страница отчета
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/allureMain.png">
+<img title="Allure Overview Dashboard" src="images/allureDashMobile.png">
 </p>
 
 - ### Страница с проведенными тестами
@@ -72,8 +72,8 @@ gradle clean test -Denv=browserstack
 
 ## :hammer: Allure Test Ops отчет
 <p align="center">
-<img title="Allure Test Ops Launch" src="images/allureTestOps.png">
-<img title="Allure Test Ops Dashboard" src="images/allureTestOps2.png">
+<img title="Allure Test Ops Launch" src="images/allureMobileLaunch.png">
+<img title="Allure Test Ops Dashboard" src="images/allureMobileDashboard.png">
 </p>
 
 ## :robot: Отчет в Telegram
