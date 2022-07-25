@@ -43,7 +43,7 @@ public class OnboardingPage {
     }
 
     @Step
-    public void checkSkip() {
+    public void skipAndCheck() {
         String resourceid = "org.wikipedia.alpha:id/main_toolbar_wordmark";
         skipButton
                 .shouldBe(exist, Duration.ofMillis(10000)).click();

@@ -34,7 +34,7 @@ public class OnboardingTests extends TestBase {
 
     @Test
     void checkSkipButton () {
-        onboardingPage.checkSkip();
+        onboardingPage.skipAndCheck();
     }
 
     @Test
