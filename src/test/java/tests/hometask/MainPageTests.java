@@ -1,5 +1,6 @@
 package tests.hometask;
 
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
 import pages.OnboardingPage;
@@ -10,6 +11,7 @@ public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Test
+    @AllureId("11631")
     void checkDonate () {
         onboardingPage.skipAndCheck();
         mainPage.checkDonate();
