@@ -4,8 +4,12 @@ import com.codeborne.selenide.SelenideElement;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
+import static tools.Tools.escapeXPath;
 
 public class OnboardingPage {
     SelenideElement pageText = $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"));
@@ -15,9 +19,10 @@ public class OnboardingPage {
             "/android.widget.LinearLayout/android.widget.LinearLayout[3]"));
     SelenideElement fourthScreen = $(AppiumBy.xpath("//android.widget.HorizontalScrollView[@content-desc=\"Page 3 of 4\"]" +
             "/android.widget.LinearLayout/android.widget.LinearLayout[4]"));
+    SelenideElement skipButton = $(AppiumBy.xpath("//android.widget.Button[@text='SKIP']"));
 
     @Step
-    public void checkTextOnPage(String text){
+    public void checkTextOnPage(String text) {
         pageText.shouldHave(text(text));
     }
 
@@ -32,8 +37,17 @@ public class OnboardingPage {
     }
 
     @Step
-    public void openFourthScreen () {
+    public void openFourthScreen() {
         fourthScreen.click();
+    }
+
+    @Step
+    public void checkSkip() {
+        String resourceid = "org.wikipedia.alpha:id/main_toolbar_wordmark";
+        skipButton
+                .shouldBe(exist, Duration.ofMillis(10000)).click();
+        $(AppiumBy.xpath("//android.widget.ImageView[contains(@resource-id, " + escapeXPath(resourceid) + ")]"))
+                .shouldBe(exist, Duration.ofMillis(10000));
     }
 
 

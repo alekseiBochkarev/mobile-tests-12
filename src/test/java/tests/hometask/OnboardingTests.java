@@ -30,6 +30,15 @@ public class OnboardingTests extends TestBase {
             onboardingPage.openFourthScreen();
             onboardingPage.checkTextOnPage(fourthScreenText);
         });
+    }
+
+    @Test
+    void checkSkipButton () {
+        onboardingPage.checkSkip();
+    }
+
+    @Test
+    void checkContinueButton () {
 
     }
 }
