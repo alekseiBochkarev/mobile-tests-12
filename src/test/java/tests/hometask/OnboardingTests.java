@@ -43,4 +43,9 @@ public class OnboardingTests extends TestBase {
         onboardingPage.checkContinue();
         onboardingPage.checkTextOnPage(secondScreenText);
     }
+
+    @Test
+    void checkAddNewLanguage () {
+        onboardingPage.checkAddOrEditLanguages();
+    }
 }

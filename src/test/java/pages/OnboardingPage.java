@@ -53,8 +53,15 @@ public class OnboardingPage {
 
     @Step
     public void checkContinue() {
-        String resourceid = "org.wikipedia.alpha:id/main_toolbar_wordmark";
         continueButton
                 .shouldBe(exist, Duration.ofMillis(10000)).click();
+    }
+
+    @Step
+    public void checkAddOrEditLanguages () {
+        String resourceid = "org.wikipedia.alpha:id/addLangContainer";
+        $(AppiumBy.xpath("//android.widget.LinearLayout[contains(@resource-id, " + escapeXPath(resourceid) + ")]"))
+                .shouldBe(exist, Duration.ofMillis(10000)).click();
+        $(AppiumBy.xpath("//android.widget.TextView[@text='Wikipedia languages']")).shouldBe(exist, Duration.ofMillis(10000));
     }
 }
