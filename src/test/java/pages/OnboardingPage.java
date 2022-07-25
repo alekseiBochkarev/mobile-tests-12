@@ -20,6 +20,7 @@ public class OnboardingPage {
     SelenideElement fourthScreen = $(AppiumBy.xpath("//android.widget.HorizontalScrollView[@content-desc=\"Page 3 of 4\"]" +
             "/android.widget.LinearLayout/android.widget.LinearLayout[4]"));
     SelenideElement skipButton = $(AppiumBy.xpath("//android.widget.Button[@text='SKIP']"));
+    SelenideElement continueButton = $(AppiumBy.xpath("//android.widget.Button[@text='CONTINUE']"));
 
     @Step
     public void checkTextOnPage(String text) {
@@ -50,5 +51,10 @@ public class OnboardingPage {
                 .shouldBe(exist, Duration.ofMillis(10000));
     }
 
-
+    @Step
+    public void checkContinue() {
+        String resourceid = "org.wikipedia.alpha:id/main_toolbar_wordmark";
+        continueButton
+                .shouldBe(exist, Duration.ofMillis(10000)).click();
+    }
 }

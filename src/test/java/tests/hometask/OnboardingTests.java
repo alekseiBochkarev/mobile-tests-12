@@ -39,6 +39,8 @@ public class OnboardingTests extends TestBase {
 
     @Test
     void checkContinueButton () {
-
+        String secondScreenText = "New ways to explore";
+        onboardingPage.checkContinue();
+        onboardingPage.checkTextOnPage(secondScreenText);
     }
 }
