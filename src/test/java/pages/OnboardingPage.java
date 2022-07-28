@@ -9,7 +9,6 @@ import java.time.Duration;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static tools.Tools.escapeXPath;
 
 public class OnboardingPage {
     SelenideElement pageText = $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView"));
