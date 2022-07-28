@@ -26,6 +26,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("project", config.project());
         mutableCapabilities.setCapability("build", config.build());
         mutableCapabilities.setCapability("name", config.name());
+        mutableCapabilities.setCapability("adbExecTimeout", 400000);
         return new RemoteWebDriver(getBrowserstackUrl(), mutableCapabilities);
     }
 
