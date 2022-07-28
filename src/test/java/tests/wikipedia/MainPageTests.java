@@ -1,4 +1,4 @@
-package tests.hometask;
+package tests.wikipedia;
 
 import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package tests.hometask;
+package tests.wikipedia;
 
 import org.junit.jupiter.api.Test;
 import pages.OnboardingPage;

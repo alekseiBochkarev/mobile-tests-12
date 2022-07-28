@@ -31,7 +31,6 @@ public class LocalMobileDriver implements WebDriverProvider {
     @Override
     public WebDriver createDriver(Capabilities capabilities) {
         File app = getApp();
-
         UiAutomator2Options options = new UiAutomator2Options();
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
@@ -41,7 +40,6 @@ public class LocalMobileDriver implements WebDriverProvider {
         options.setApp(app.getAbsolutePath());
         options.setAppPackage(config.appPackage());
         options.setAppActivity(config.appActivity());
-
         return new AndroidDriver(getAppiumServerUrl(), options);
     }
 

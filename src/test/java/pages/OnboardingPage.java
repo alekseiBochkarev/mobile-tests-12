@@ -44,23 +44,19 @@ public class OnboardingPage {
 
     @Step
     public void skipAndCheck() {
-        String resourceid = "org.wikipedia.alpha:id/main_toolbar_wordmark";
-        skipButton
-                .shouldBe(exist, Duration.ofMillis(10000)).click();
-        $(AppiumBy.xpath("//android.widget.ImageView[contains(@resource-id, " + escapeXPath(resourceid) + ")]"))
+        skipButton.shouldBe(exist, Duration.ofMillis(10000)).click();
+        $(AppiumBy.xpath("//android.widget.ImageView[contains(@resource-id, 'org.wikipedia.alpha:id/main_toolbar_wordmark')]"))
                 .shouldBe(exist, Duration.ofMillis(10000));
     }
 
     @Step
     public void checkContinue() {
-        continueButton
-                .shouldBe(exist, Duration.ofMillis(10000)).click();
+        continueButton.shouldBe(exist, Duration.ofMillis(10000)).click();
     }
 
     @Step
-    public void checkAddOrEditLanguages () {
-        String resourceid = "org.wikipedia.alpha:id/addLangContainer";
-        $(AppiumBy.xpath("//android.widget.LinearLayout[contains(@resource-id, " + escapeXPath(resourceid) + ")]"))
+    public void checkAddOrEditLanguages() {
+        $(AppiumBy.xpath("//android.widget.LinearLayout[contains(@resource-id, 'org.wikipedia.alpha:id/addLangContainer')]"))
                 .shouldBe(exist, Duration.ofMillis(10000)).click();
         $(AppiumBy.xpath("//android.widget.TextView[@text='Wikipedia languages']")).shouldBe(exist, Duration.ofMillis(10000));
     }

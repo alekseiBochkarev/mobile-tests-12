@@ -16,6 +16,7 @@ import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     static String env;
+
     @BeforeAll
     public static void setup() {
         env = System.getProperty("env", "local");
@@ -29,16 +30,9 @@ public class TestBase {
         Configuration.browserSize = null;
     }
 
-    private enum Env
-    {
-        browserstack,
-        local
-    }
-
     @BeforeEach
     public void startDriver() {
         addListener("AllureSelenide", new AllureSelenide());
-
         open();
     }
 
